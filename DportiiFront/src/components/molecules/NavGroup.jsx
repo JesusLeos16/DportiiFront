@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 export const NavGroup = () => {
   const links = ["TORNEO", "PARTICIPANTES", "COMBATE", "MATCHUP", "ACADEMIAS"];
-  const [activeTab, setActiveTab] = useState('TORNEO');
+  const [activeTab, setActiveTab] = useState("TORNEO");
   return (
     <div className="flex justify-center gap-10 py-3 border-b border-gray-100">
       {links.map((link, index) => (
