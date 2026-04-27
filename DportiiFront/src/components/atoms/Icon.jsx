@@ -9,6 +9,6 @@ export const IconMenu = () => {
 
 export const IconUser = () => {
   return (
-    <FaUserCircle className="text-2xl text-gray-700" />
+    <FaUserCircle className="text-3xl text-gray-700" />
   );
 };
