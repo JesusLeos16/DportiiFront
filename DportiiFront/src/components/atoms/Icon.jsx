@@ -1,14 +1,18 @@
 import React from "react";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { FaUserCircle } from "react-icons/fa";
-export const IconMenu = () => {
+export const IconMenu = ({onClick}) => {
   return (
-    <RxHamburgerMenu className="text-2xl text-blue-800" />
+    <RxHamburgerMenu 
+    onClick={onClick}
+    className="text-2xl text-blue-800" />
   );
 };
 
-export const IconUser = () => {
+export const IconUser = ({onClick}) => {
   return (
-    <FaUserCircle className="text-3xl text-gray-700" />
+    <FaUserCircle 
+      onClick={onClick}
+      className="text-3xl text-gray-700" />
   );
 };

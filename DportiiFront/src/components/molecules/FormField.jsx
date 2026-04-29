@@ -1,3 +1,5 @@
+import { Input } from "../atoms/Input";
+
 export const FormField = ({ label, type, placeholder }) => {
   return (
     <div className="mb-4">
