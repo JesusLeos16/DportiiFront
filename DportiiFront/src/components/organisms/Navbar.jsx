@@ -1,11 +1,20 @@
 import React, { useState } from 'react';
-import { IconMenu, IconUser } from '../atoms/Icon';
+import { useNavigate } from 'react-router-dom';
+import { IconMenu, IconLogout } from '../atoms/Icon';
 import { NavGroup } from '../molecules/NavGroup';
 
 export const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(true);
+  const navigate = useNavigate();
+  
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+  };
+
+  const handleLogout = () => {
+    localStorage.removeItem('token');
+    localStorage.removeItem('user');
+    navigate('/');
   };
 
   return (
@@ -14,7 +23,7 @@ export const Navbar = () => {
           <IconMenu onClick={toggleMenu} /> 
           
           <h1 className="text-2xl font-extrabold text-blue-700 tracking-tight">Dportii</h1>
-          <IconUser onClick={toggleMenu} />
+          <IconLogout onClick={handleLogout} />
       </div>
       <div 
         className={`overflow-hidden transition-all duration-300 ease-in-out ${

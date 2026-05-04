@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { getUsersRequest } from '../../api/authApi'
+import { getUsersRequest } from '../api/authApi'
 
 export default function Users() {
   const [users, setUsers] = useState([])

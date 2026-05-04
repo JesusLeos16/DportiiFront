@@ -1,5 +1,4 @@
 import React from "react";
-// Asumimos que tienes átomos de iconos (ej. react-icons)
 import { FiCalendar, FiMapPin, FiEdit2, FiTrash2 } from "react-icons/fi";
 
 export const TournamentCard = ({
