@@ -1,0 +1,27 @@
+export const HeroElite = () => {
+  return (
+    <section className="relative max-w-7xl mx-auto px-8 py-20 lg:py-32 flex flex-col lg:flex-row items-center gap-16">
+      <div className="absolute top-0 right-0 w-800px h-800px bg-blue-50/50 rounded-full blur-3xl -z-10 translate-x-1/3 -translate-y-1/4"></div>
+
+      <div className="flex-1 space-y-8 z-10">
+        <h1 className="text-5xl lg:text-[4rem] leading-[1.05] font-extrabold text-[#0B1B3D] tracking-tight">
+          Gestión Elite para Competiciones de Alto Nivel
+        </h1>
+        <p className="text-lg text-slate-500 max-w-lg leading-relaxed">
+          La plataforma definitiva para organizar torneos, gestionar atletas y controlar tus finanzas en un solo lugar.
+        </p>
+        <a href="/login" className="px-8 py-4 bg-[#F8F9FA] hover:bg-gray-100 text-slate-700 font-semibold rounded-2xl shadow-sm border border-gray-100 transition-all">
+          Comenzar Ahora
+        </a>
+      </div>
+
+      <div className="flex-1 w-full relative">
+        <div className="bg-blue-600 p-4 lg:p-6 rounded-4xl shadow-2xl rotate-2 hover:rotate-0 transition-transform duration-500">
+          <div className="bg-white rounded-xl h-300px lg:h-400px w-full overflow-hidden shadow-inner flex items-center justify-center text-slate-300">
+                <img src="../../../public/hero.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
