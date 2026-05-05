@@ -7,13 +7,13 @@ export const LanNav = () => {
       </div>
       
       <div className="hidden md:flex gap-8 text-sm font-medium text-slate-500">
-        <a href="#caracteristicas" className="hover:text-slate-900 transition-colors">Características</a>
-        <a href="#beneficios" className="hover:text-slate-900 transition-colors">Beneficios</a>
-        <a href="#testimonios" className="hover:text-slate-900 transition-colors">Testimonios</a>
+        <a href="#caracteristicas" className="hover:text-blue-600 transition-colors">Características</a>
+        <a href="#beneficios" className="hover:text-blue-600 transition-colors">Beneficios</a>
+        <a href="#testimonios" className="hover:text-blue-600 transition-colors">Testimonios</a>
       </div>
 
-      <button className="text-sm font-semibold text-slate-300 hover:text-slate-600 transition-colors">
-        COMENZAR
+      <button className="text-sm font-semibold text-slate-300 hover:text-blue-600 transition-colors">
+        <a href="registro">COMENZAR</a>
       </button>
     </nav>
   );

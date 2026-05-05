@@ -5,9 +5,9 @@ export const Footer = () => {
         <h2 className="text-5xl font-extrabold text-[#0B1B3D] mb-8 tracking-tight">
           Lleva tu organización al <br className="hidden md:block"/> siguiente nivel.
         </h2>
-        <button className="px-10 py-4 bg-white text-slate-700 font-bold rounded-2xl shadow-sm border border-gray-100 hover:bg-gray-50 transition-all">
+        <a href="/registro" className="px-10 py-4 bg-white text-slate-700 font-bold rounded-2xl shadow-sm border border-gray-100 hover:bg-gray-50 transition-all">
           Prueba Gratis
-        </button>
+        </a>
       </section>
 
       <footer className="bg-[#F4F5F7] px-8 py-10 flex flex-col md:flex-row items-center justify-between gap-6">

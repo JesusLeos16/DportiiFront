@@ -10,15 +10,15 @@ export const HeroElite = () => {
         <p className="text-lg text-slate-500 max-w-lg leading-relaxed">
           La plataforma definitiva para organizar torneos, gestionar atletas y controlar tus finanzas en un solo lugar.
         </p>
-        <a href="/login" className="px-8 py-4 bg-[#F8F9FA] hover:bg-gray-100 text-slate-700 font-semibold rounded-2xl shadow-sm border border-gray-100 transition-all">
+        <a href="/registro" className="px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-2xl shadow-sm border border-blue-600 transition-all">
           Comenzar Ahora
         </a>
       </div>
 
       <div className="flex-1 w-full relative">
-        <div className="bg-blue-600 p-4 lg:p-6 rounded-4xl shadow-2xl rotate-2 hover:rotate-0 transition-transform duration-500">
+        <div className="bg-slate-300 p-4 lg:p-6 rounded-4xl shadow-2xl rotate-2 hover:rotate-0 transition-transform duration-500">
           <div className="bg-white rounded-xl h-300px lg:h-400px w-full overflow-hidden shadow-inner flex items-center justify-center text-slate-300">
-                <img src="../../../public/hero.png" alt="" />
+                <img src="../../../public/hero.png" alt="imagen de torneo artes marciales" />
           </div>
         </div>
       </div>
