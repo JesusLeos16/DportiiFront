@@ -13,7 +13,6 @@ export const TournamentCard = ({
         <h3 className="text-xl font-bold text-blue-950">{name}</h3>
 
         <div className="flex items-center gap-6 text-gray-600 text-sm">
-          {/* Fecha */}
           <div className="flex items-center gap-2">
             <FiCalendar className="text-blue-600" />
             <span>{Date}</span>

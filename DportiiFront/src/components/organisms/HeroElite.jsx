@@ -10,7 +10,7 @@ export const HeroElite = () => {
         <p className="text-lg text-slate-500 max-w-lg leading-relaxed">
           La plataforma definitiva para organizar torneos, gestionar atletas y controlar tus finanzas en un solo lugar.
         </p>
-        <a href="/registro" className="px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-2xl shadow-sm border border-blue-600 transition-all">
+        <a href="/login" className="px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-2xl shadow-sm border border-blue-600 transition-all">
           Comenzar Ahora
         </a>
       </div>
