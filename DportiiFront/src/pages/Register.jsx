@@ -15,11 +15,11 @@ export default function Register() {
     setMensaje("");
 
     try {
-      await registerRequest(name, email, password);
       if (!name.trim() || !email.trim() || !password.trim()) {
         setMensaje("Por favor completa todos los campos");
         return;
       }
+      await registerRequest(name, email, password);
       setMensaje("¡Registro exitoso! Redirigiendo al inicio de sesión...");
 
       setTimeout(() => {
