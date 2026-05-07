@@ -3,13 +3,21 @@ import { Button } from "../components/atoms/Button";
 import { TournamentCard } from "../components/organisms/TournamentCard";
 import { NoTournaments } from "../components/organisms/NoTournaments";
 import { TournamentForm } from "../components/organisms/TournamentForm";
-
+import { useEffect } from "react";
+import { getTorneosRequest } from "../api/torneoApi";
 export const TournamentPage = () => {
-  const [tournaments, setTournaments] = useState([
-    //pruebasasasasassa
-     { name: "Torneo de fortnite puro pro cawn", Date: "2006-07-16" },
-     { name: "Torneo de fortnite para mancos", Date: "0000-00-00" },
-  ]);
+  const [tournaments, setTournaments] = useState([]);
+  useEffect(() => {
+    const cargarTorneos = async () => {
+      try {
+        const data = await getTorneosRequest();
+        setTournaments(data);
+      } catch (error) {
+        console.error("No se pudo carnal");
+      }
+    };
+    cargarTorneos();
+  }, []);
 
   const [showForm, setShowForm] = useState(false);
   const handleAddTournament = () => setShowForm(true);
@@ -43,10 +51,10 @@ export const TournamentPage = () => {
           {tournaments.map((torneo, index) => (
             <TournamentCard
               key={index}
-              name={torneo.name}
-              Date={torneo.Date}
-              onEdit={() => console.log("Editando", torneo.name)}
-              onDelete={() => console.log("Borrando", torneo.name)}
+              name={torneo.nombre}
+              Date={torneo.fecha}
+              onEdit={() => console.log("Editando", torneo.nombre)}
+              onDelete={() => console.log("Borrando", torneo.nombre)}
             />
           ))}
         </div>
