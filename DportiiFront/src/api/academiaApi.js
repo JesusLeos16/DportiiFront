@@ -1,9 +1,10 @@
 import api from "./axios";
-export const academiaRequest = async (name, email, password) => {
+export const academiaRequest = async (nombre, entrenador, direccion, telefono) => {
   const response = await api.post("academia", {
-    name,
-    email,
-    password,
+    nombre,
+    entrenador,
+    direccion,
+    telefono,
   });
   return response.data;
 };

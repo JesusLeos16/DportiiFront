@@ -45,6 +45,7 @@ export default function App() {
             </ProtectedRoute>
           }
         />
+        
         <Route
           path="/academias"
           element={

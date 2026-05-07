@@ -1,44 +1,40 @@
 import React, { useState } from 'react';
 import { Button } from '../components/atoms/Button';
 import { AcademyCard } from '../components/organisms/AcademyCard';
-import { NoAcademies } from '../components/organisms/NoAcademies';
+import { NoAcademies} from '../components/organisms/NoAcademies';
+import { AcademyForm } from "../components/organisms/AcademyForm";
+import { academiaRequest } from '../api/academiaApi';
+import { useEffect } from 'react';
 
 export const AcademyPage = () => {
-  const [academies, setAcademies] = useState([
-    //pruebas miadas
-    { 
-      idAcademia: 1, 
-      nombre: 'Chao Team', 
-      entrenador: 'Adrian Chao', 
-      direccion: 'Por ahi ', 
-      telefono: '123456' 
-    },
-    { 
-      idAcademia: 2, 
-      nombre: 'Soldados de sparta', 
-      entrenador: 'Jesus Leos', 
-      direccion: 'Calle fortnite', 
-      telefono: '987654' 
-    }
-  ]);
-  
-  const [showForm, setShowForm] = useState(false);
+  const [academies, setAcademies] = useState([]);
+  useEffect(() => {
+    const cargarAcademias = async () => {
+      try{
+        const data = await academiaRequest();
+        setAcademies(data);
+      }catch(error){
+        console.error("Error al cargar academias:", error);
+      }
+    };
+    cargarAcademias();
+  }, []);
 
+  const[showForm,setShowForm]=useState(false);
   const handleAddAcademy = () => setShowForm(true);
   const handleCloseForm = () => setShowForm(false);
-
-  if (showForm) {
-    return (
-      <div className="p-6 max-w-4xl mx-auto">
-         <Button variant="secondary" onClick={handleCloseForm} className="mb-6">
-           &larr; Volver a la lista
-         </Button>
-         <div className="bg-white p-10 rounded-xl shadow border border-gray-100 text-center">
-            <h2 className="text-xl font-bold text-gray-500">En construccion xd</h2>
-         </div>
+  if(showForm){
+    return(
+      <div>
+        <Button variant="secondary" onClick={handleCloseForm}>
+          Volver
+        </Button>
+        <AcademyForm/>
       </div>
     );
   }
+
+  
 
   return (
     <div className="p-6 max-w-7xl mx-auto">
@@ -46,9 +42,9 @@ export const AcademyPage = () => {
         <h1 className="text-3xl font-extrabold text-blue-950">Gestión de Academias</h1>
         
         {academies.length > 0 && (
-          <Button variant="primary" onClick={handleAddAcademy}>
+          <a href="/AcademyForm" variant="primary" onClick={handleAddAcademy}>
             + Registrar Academia
-          </Button>
+          </a>
         )}
       </div>
 
@@ -63,8 +59,6 @@ export const AcademyPage = () => {
               entrenador={academia.entrenador}
               direccion={academia.direccion}
               telefono={academia.telefono}
-              onEdit={() => console.log('Editando', academia.nombre)}
-              onDelete={() => console.log('Borrando', academia.nombre)}
             />
           ))}
         </div>

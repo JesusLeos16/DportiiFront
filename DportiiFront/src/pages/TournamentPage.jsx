@@ -53,8 +53,6 @@ export const TournamentPage = () => {
               key={index}
               name={torneo.nombre}
               Date={torneo.fecha}
-              onEdit={() => console.log("Editando", torneo.nombre)}
-              onDelete={() => console.log("Borrando", torneo.nombre)}
             />
           ))}
         </div>
