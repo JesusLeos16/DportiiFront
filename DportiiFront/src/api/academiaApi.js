@@ -8,3 +8,7 @@ export const academiaRequest = async (nombre, entrenador, direccion, telefono) =
   });
   return response.data;
 };
+export const getAcademiasRequest = async () => {
+  const response = await api.get("academia");
+  return response.data;
+};
