@@ -1,15 +1,14 @@
 import React, { useState } from "react";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 const routes = {
-  "TORNEO": "/torneos",
-  "ACADEMIAS": "/academias",
-  "PARTICIPANTES": "/participantes",
-  "COMBATE": "/combate",
-  "MATCHUP": "/matchup"
+  TORNEO: "/torneos",
+  ACADEMIAS: "/academias",
+  PELEADORES: "/peleadores",
+  COMBATE: "/combate",
+  MATCHUP: "/matchup",
 };
 export const NavGroup = () => {
-
-  const links = ["TORNEO", "PARTICIPANTES", "COMBATE", "MATCHUP", "ACADEMIAS"];
+  const links = ["TORNEO", "PELEADORES", "ACADEMIAS", "COMBATE", "MATCHUP"];
   const [activeTab, setActiveTab] = useState("TORNEO");
   const navigate = useNavigate();
   return (

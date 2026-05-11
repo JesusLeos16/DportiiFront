@@ -28,6 +28,7 @@ import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
 import Users from "./pages/Users";
 import ProtectedRoute from "./components/ProtectedRoute";
+import { PeleadoresPage } from "./pages/PeleadoresPage";
 
 export default function App() {
   return (
@@ -45,7 +46,16 @@ export default function App() {
             </ProtectedRoute>
           }
         />
-        
+        <Route
+          path="/peleadores"
+          element={
+            <ProtectedRoute>
+              <Navbar />
+              <PeleadoresPage />
+            </ProtectedRoute>
+          }
+        />
+
         <Route
           path="/academias"
           element={
