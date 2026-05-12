@@ -1,4 +1,4 @@
-import { Select } from "../atoms/select";
+import { Select } from "../atoms/Select";
 export const SelectField = ({ label, options, ...props }) => {
   return (
     <div className="mb-4">
