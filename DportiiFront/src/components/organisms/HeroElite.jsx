@@ -18,7 +18,7 @@ export const HeroElite = () => {
       <div className="flex-1 w-full relative">
         <div className="bg-slate-300 p-4 lg:p-6 rounded-4xl shadow-2xl rotate-2 hover:rotate-0 transition-transform duration-500">
           <div className="bg-white rounded-xl h-300px lg:h-400px w-full overflow-hidden shadow-inner flex items-center justify-center text-slate-300">
-                <img src="../../../public/hero.png" alt="imagen de torneo artes marciales" />
+                <img src="/hero.png" alt="imagen de torneo artes marciales" />
           </div>
         </div>
       </div>

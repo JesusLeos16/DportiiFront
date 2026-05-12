@@ -5,7 +5,7 @@ export const ExcellenceSection = () => {
     <section id="beneficios" className="max-w-7xl mx-auto px-8 py-24 flex flex-col lg:flex-row items-center gap-16">
       <div className="flex-1 w-full">
         <div className="bg-[#0B131F] w-full h-400px rounded-[2.5rem] shadow-xl overflow-hidden flex items-center justify-center">
-           <img src="../../public/pelao.png" alt="" />
+           <img src="/pelao.png" alt="" />
         </div>
       </div>
       
