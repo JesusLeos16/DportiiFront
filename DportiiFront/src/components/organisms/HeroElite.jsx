@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 export const HeroElite = () => {
   return (
     <section className="relative max-w-7xl mx-auto px-8 py-20 lg:py-32 flex flex-col lg:flex-row items-center gap-16">
@@ -10,9 +12,9 @@ export const HeroElite = () => {
         <p className="text-lg text-slate-500 max-w-lg leading-relaxed">
           La plataforma definitiva para organizar torneos, gestionar atletas y controlar tus finanzas en un solo lugar.
         </p>
-        <a href="/login" className="px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-2xl shadow-sm border border-blue-600 transition-all">
+        <Link to="/login" className="px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-2xl shadow-sm border border-blue-600 transition-all inline-block">
           Comenzar Ahora
-        </a>
+        </Link>
       </div>
 
       <div className="flex-1 w-full relative">
