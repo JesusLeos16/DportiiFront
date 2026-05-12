@@ -19,7 +19,7 @@
 // export default App;
 
 import { TournamentPage } from "./pages/TournamentPage";
-import { Navbar } from "./components/organisms/navbar";
+import { Navbar } from "./components/organisms/Navbar";
 import { AcademyPage } from "./pages/AcademyPage";
 import { Routes, Route, Link } from "react-router-dom";
 import { LandingPage } from "./pages/LandingPage";
