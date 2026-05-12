@@ -58,7 +58,7 @@ export default function Login() {
           <div className="text-center mb-10">
             <div className="flex items-center justify-center gap-2">
               <div className="w-6 h-6 rounded-sm">
-                <img src="/favi2.jpg" alt="Dportii Logo" />
+                <img src="/favi2.png" alt="Dportii Logo" />
               </div>
               <span className="text-xl font-extrabold text-blue-950 tracking-tight">
                 Dportii
