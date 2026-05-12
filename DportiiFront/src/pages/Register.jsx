@@ -38,7 +38,7 @@ export default function Register() {
       <div className="md:flex flex-col items-center justify-center bg-zinc-800 md:p-16 p-8 relative overflow-hidden">
         <div
           className="absolute inset-0 opacity-40 bg-cover bg-center"
-          style={{ backgroundImage: "url('../../public/screen.jpg')" }}
+          style={{ backgroundImage: "url('/screen.jpg')" }}
         ></div>
 
         <div className="gap-2 relative z-10 text-center md:text-left">
