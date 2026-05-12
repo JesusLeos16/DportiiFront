@@ -4,7 +4,7 @@ export const LanNav = () => {
     <nav className="flex items-center justify-between px-8 py-6 max-w-7xl mx-auto">
       <div className="flex items-center gap-2">
         <div className="w-6 h-6 rounded-sm">
-          <img src="public/favi2.png" alt="Dportii Logo" />
+          <img src="/favi2.jpg" alt="Dportii Logo" />
         </div>
         <span className="text-xl font-extrabold text-blue-950 tracking-tight">
           Dportii

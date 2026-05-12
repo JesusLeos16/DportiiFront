@@ -63,7 +63,7 @@ export default function Register() {
             <div className="flex items-center justify-center gap-2">
               <div className="flex items-center justify-center gap-2">
                 <div className="w-6 h-6 rounded-sm">
-                  <img src="../../public/favi2.png" alt="Dportii Logo" />
+                  <img src="/favi2.jpg" alt="Dportii Logo" />
                 </div>
                 <h2 className="text-2xl font-extrabold text-blue-950 tracking-tight">
                   Dportii
