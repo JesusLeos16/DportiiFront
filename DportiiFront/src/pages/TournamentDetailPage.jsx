@@ -343,8 +343,12 @@ export const TournamentDetailPage = () => {
                     <option value={categoriaDetectada}>
                       {categoriaDetectada} (Recomendada)
                     </option>
-                    <option value="Peso Ligero">Peso Ligero (hasta 68kg)</option>
-                    <option value="Peso Intermedio">Peso Intermedio (hasta 79kg)</option>
+                    <option value="Peso Ligero">
+                      Peso Ligero (hasta 68kg)
+                    </option>
+                    <option value="Peso Intermedio">
+                      Peso Intermedio (hasta 79kg)
+                    </option>
                     <option value="Peso Pesado">Peso Pesado (+80kg)</option>
                     <option value="Categoría Especial">
                       Categoría Especial

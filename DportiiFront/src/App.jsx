@@ -19,17 +19,16 @@
 // export default App;
 
 import { TournamentPage } from "./pages/TournamentPage";
-import { Navbar } from "./components/organisms/Navbar";
 import { AcademyPage } from "./pages/AcademyPage";
 import { Routes, Route, Link } from "react-router-dom";
 import { LandingPage } from "./pages/LandingPage";
 import Register from "./pages/Register";
 import Login from "./pages/Login";
-import Dashboard from "./pages/Dashboard";
-import Users from "./pages/Users";
 import ProtectedRoute from "./components/ProtectedRoute";
 import { PeleadoresPage } from "./pages/PeleadoresPage";
 import { TournamentDetailPage } from "./pages/TournamentDetailPage";
+import { Layout } from "./components/templates/Layout";
+import { RegistrosPage } from "./pages/RegistrosPage";
 
 export default function App() {
   return (
@@ -38,12 +37,14 @@ export default function App() {
         <Route path="/" element={<LandingPage />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+        
         <Route
           path="/torneos"
           element={
             <ProtectedRoute>
-              <Navbar />
-              <TournamentPage />
+              <Layout>
+                <TournamentPage />
+              </Layout>
             </ProtectedRoute>
           }
         />
@@ -51,8 +52,19 @@ export default function App() {
           path="/torneos/:id"
           element={
             <ProtectedRoute>
-              <Navbar />
-              <TournamentDetailPage />
+              <Layout>
+                <TournamentDetailPage />
+              </Layout>
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/registros"
+          element={
+            <ProtectedRoute>
+              <Layout>
+                <RegistrosPage />
+              </Layout>
             </ProtectedRoute>
           }
         />
@@ -60,18 +72,40 @@ export default function App() {
           path="/peleadores"
           element={
             <ProtectedRoute>
-              <Navbar />
-              <PeleadoresPage />
+              <Layout>
+                <PeleadoresPage />
+              </Layout>
             </ProtectedRoute>
           }
         />
-
         <Route
           path="/academias"
           element={
             <ProtectedRoute>
-              <Navbar />
-              <AcademyPage />
+              <Layout>
+                <AcademyPage />
+              </Layout>
+            </ProtectedRoute>
+          }
+        />
+        {/* Agrega rutas de combate y matchup igual si ya las tienes */}
+        <Route
+          path="/combate"
+          element={
+            <ProtectedRoute>
+              <Layout>
+                <div className="p-10 text-center font-bold text-gray-500">Módulo de Combate (Próximamente)</div>
+              </Layout>
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/matchup"
+          element={
+            <ProtectedRoute>
+              <Layout>
+                <div className="p-10 text-center font-bold text-gray-500">Módulo de Matchup (Próximamente)</div>
+              </Layout>
             </ProtectedRoute>
           }
         />
