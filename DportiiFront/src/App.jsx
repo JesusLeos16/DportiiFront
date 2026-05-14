@@ -29,6 +29,7 @@ import Dashboard from "./pages/Dashboard";
 import Users from "./pages/Users";
 import ProtectedRoute from "./components/ProtectedRoute";
 import { PeleadoresPage } from "./pages/PeleadoresPage";
+import { TournamentDetailPage } from "./pages/TournamentDetailPage";
 
 export default function App() {
   return (
@@ -43,6 +44,15 @@ export default function App() {
             <ProtectedRoute>
               <Navbar />
               <TournamentPage />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/torneos/:id"
+          element={
+            <ProtectedRoute>
+              <Navbar />
+              <TournamentDetailPage />
             </ProtectedRoute>
           }
         />

@@ -51,6 +51,7 @@ export const TournamentPage = () => {
           {tournaments.map((torneo, index) => (
             <TournamentCard
               key={index}
+              id={torneo.idTorneo}
               name={torneo.nombre}
               Date={torneo.fecha}
             />

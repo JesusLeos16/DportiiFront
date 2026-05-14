@@ -1,10 +1,19 @@
 import api from "./axios";
 
-export const peleadorRequest = async (nombre, apodo, peso, nivel, telefono, idAcademia) => {
+export const peleadorRequest = async (
+  nombre,
+  apodo,
+  peso,
+  edad,
+  nivel,
+  telefono,
+  idAcademia,
+) => {
   const response = await api.post("peleador", {
     nombre,
     apodo,
     peso,
+    edad,
     nivel,
     telefono,
     idAcademia,
