@@ -29,6 +29,7 @@ import { PeleadoresPage } from "./pages/PeleadoresPage";
 import { TournamentDetailPage } from "./pages/TournamentDetailPage";
 import { Layout } from "./components/templates/Layout";
 import { RegistrosPage } from "./pages/RegistrosPage";
+import { MatchupPage } from "./pages/MatchupPage";
 
 export default function App() {
   return (
@@ -104,7 +105,7 @@ export default function App() {
           element={
             <ProtectedRoute>
               <Layout>
-                <div className="p-10 text-center font-bold text-gray-500">Módulo de Matchup (Próximamente)</div>
+                <MatchupPage />
               </Layout>
             </ProtectedRoute>
           }

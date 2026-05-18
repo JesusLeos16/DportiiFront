@@ -1,6 +1,6 @@
 import React from "react";
 import { FiInbox } from "react-icons/fi";
-import { Button } from "../atoms/Button"; // Reutilizamos tu botón
+import { Button } from "../atoms/Button";
 
 export const NoTournaments = ({ onAddClick }) => {
   return (
